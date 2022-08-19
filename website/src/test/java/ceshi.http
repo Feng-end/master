@@ -1,0 +1,51 @@
+GET http://localhost:8080/t1
+Authorization: Basic admin admin
+
+
+###
+POST http://localhost:8080/website/login
+Content-Type: application/json
+Authorization: Digest user passwd
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+
+###
+POST http://localhost:8080/user/leavewords/leaveword
+Content-Type: application/json
+
+{
+  "name": "usj",
+  "phoneNum": "123123123",
+  "email": "12321321321",
+  "companyName": "啦啦啦",
+  "industry": "撒看见哦倒是",
+  "content": "撒旦撒大沙发沙发大师傅打发骄傲地哦大家阿德撒可见度哦怕时间都派萨迦派的骄傲送配件破案将打破撒娇的破案",
+  "classifyType": 0
+}
+###
+GET http://localhost:8080/admin/leavawords/excel
+
+###修改
+PUT http://localhost:8080/admin/leavawords/leaveword-classify
+Content-Type: application/json
+
+{
+  "ids": [
+    "1550354747588771840"
+  ],
+  "classifyType": 2
+}
+
+###
+POST http://localhost:8080/admin/leavawords/leaveword
+jwt:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290IiwiY3JlYXRlIjoiMTY1ODc1MTY4NDIyOCJ9.htSjcpXHucK3E422yiiCI-ygrXw-fRaRo9EsIciqAlg
+Content-Type: application/json
+
+{
+  "pageNo": 1,
+  "pageSize": 5
+}

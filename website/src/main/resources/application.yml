@@ -1,0 +1,45 @@
+spring:
+  data:
+    mongodb:
+#      username: ${witsky.spring.data.mongodb.username}
+#      password: ${witsky.spring.data.mongodb.password}
+#      authentication-database: ${witsky.spring.data.mongodb.authentication-database}
+#      host: ${witsky.spring.data.mongodb.host}
+#      port: ${witsky.spring.data.mongodb.port}
+#      database: ${witsky.spring.data.mongodb.database}
+      uri: mongodb://witsky:Witsky0818adad@192.168.1.83:27017/website?authSource=admin
+#      uri: mongodb://witsky:Witsky0818adad@127.0.0.1:27019/website?authSource=admin
+
+witsky:
+  server:
+    port: ${SERVER_PORT:8080}
+  local-user: "{root: '123456', user: '123456'}"
+  picture-path: ${WITSKY_PICTURE_PATH:"d:/demo/"}
+  auth-switch: ${WITSKY_AUTH_SWITCH:true}
+  spring:
+    data:
+      mongodb:
+        host: ${WITSKY_MONGO_HOST:192.168.1.83}
+        port: ${WITSKY_MONGO_PORT:27017}
+        database: ${WITSKY_MONGO_DATABASE:website}
+        username: ${WITSKY_MONGO_USERNAME:Witsky}
+        password: ${WITSKY_MONGO_PASSWORD:Witsky0818adad}
+        authentication-database: ${WITSKY_MONGO_AUTH_DATABASE:admin}
+
+server:
+  port: ${witsky.server.port}
+
+
+#springdoc:
+#  swagger-ui:
+#    path: /apidoc.html
+#    enabled: true
+#    disable-swagger-default-url: true
+#    use-root-path: true
+#    display-request-duration: true
+#    operations-sorter: alpha
+#    display-operation-id: true
+#  cache:
+#    disabled: true
+#  api-docs:
+#    path: /api-docs

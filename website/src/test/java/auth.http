@@ -1,0 +1,16 @@
+### 认证
+POST http://localhost:8080/authentication
+Content-Type: application/json
+
+{
+  "username": "root",
+  "password": "123456"
+}
+
+###
+GET http://localhost:8080/admin/aaa
+jwt:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290IiwiY3JlYXRlIjoiMTY1ODc1MTY4NDIyOCJ9.htSjcpXHucK3E422yiiCI-ygrXw-fRaRo9EsIciqAlg
+
+
+###
+GET http://localhost:8080/user/aaa

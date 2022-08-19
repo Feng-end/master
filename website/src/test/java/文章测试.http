@@ -1,0 +1,53 @@
+### 添加文章
+POST http://localhost:8080/admin/articles/article
+Content-Type: application/json
+
+{
+  "title": "test_305603da2de9",
+  "simpleContent": "test_56111720cd69",
+  "pictureNo": "test_1088737ecb46",
+  "keywords": "test_2e1e18ec1ae5",
+  "des": "test_b16c46bad671",
+  "onClickNum": 24,
+  "webSource": "test_41f62c52565b",
+  "author": "test_44843168cb9e",
+  "priority": 1,
+  "userDefinedUrl": "test_e37751f615e0",
+  "attribute": "test_d50b21ac3ba7",
+  "theTemplate": "test_459905cf6579",
+  "articleType": "SOLUTION",
+  "industry": "教育12134"
+}
+
+### 修改
+PUT http://localhost:8080/admin/articles/62de3336cb84d52b8b1718ef
+Content-Type: application/json
+
+{
+  "title": "iojdsadsajdsajodj",
+  "simpleContent": "sajdasjdojasdojsadijasjdoasjdjasijdoiasjdoasjdjklaml",
+  "pictureNo": "test_1088737ecb46",
+  "keywords": "test_2e1e18ec1ae5",
+  "des": "sadsadsadsadasdasd",
+  "onClickNum": 24,
+  "webSource": "test_41f62c52565b",
+  "author": "test_44843168cb9e",
+  "priority": 1,
+  "userDefinedUrl": "test_e37751f615e0",
+  "attribute": "test_d50b21ac3ba7",
+  "theTemplate": "test_459905cf6579",
+  "articleType": "SOLUTION",
+  "industry": "教育12134"
+}
+
+###分页
+POST http://localhost:8080/user/articles/seos
+Content-Type: application/json
+
+{
+  "pageNo": 1,
+  "pageSize": 5
+}
+
+### 根据id获取
+GET http://localhost:8080/user/articles/62de3336cb84d52b8b1718ef
